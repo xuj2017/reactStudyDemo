@@ -60,14 +60,16 @@ class LoadingButton3 extends Component{
     render(){
         const {loading,btnText,totalSecond} = this.state
         return(
-            <div>
                 <button disabled={loading} onClick={this.onFetch.bind(this)}>
                     {!loading ? btnText : `请等待${totalSecond}秒..`}
                 </button>
-            </div>
-            
         )
     }
 }
 
-export default LoadingButton3;
+export default ()=>(
+    <div>
+         <LoadingButton3 btnText={"获取验证码3.1"} totalSecond={12} />
+         <LoadingButton3 btnText={"获取验证码3.2"} totalSecond={15} />
+    </div>
+);

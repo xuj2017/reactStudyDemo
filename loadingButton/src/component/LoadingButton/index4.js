@@ -8,9 +8,7 @@ import React,{Component} from 'react';
 
 class LoadingButtonProps extends Component{
 
-    constructor(props){
-        super(props)
-    }
+   
     timer = null;
     componentWillUnmount(){
         this.clear();
